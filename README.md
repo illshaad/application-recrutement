@@ -4,13 +4,13 @@ Une application gestion RH
 
 ## 1ER partie de l'application
 
-- Possibilité de selectionnées plusieurs candidature
-- Possibilité d'envoyé un email (non fonctionnel fake email)
-- Possibilité de filitrer par note ou prenom
+- Possibilité de sélectionnées plusieurs candidatures
+- Possibilité d'envoyer un email (non fonctionnel fake email)
+- Possibilité de filtrer par note ou prénom
 
 ## 2ER partie de l'application (en cours)
-
+- Correction du responsif
 - Possibilité de rechercher un candidat
-- Création composant statistique
-- Affiche divers charts graphique ( reflection techno chartsJs ou d3js)
-- Création d'une base de donnée
+- Création composante statistique
+- Affiche divers charts graphiques ( réflexion techno chartsjs ou djs )
+- Création d'une base de données
