@@ -2,6 +2,12 @@
 
 Une application gestion RH
 
+## Utiliser le projet
+
+- Clone le repository
+- Dans le dossier server et npm install puis npm start
+- Dans le dossier client et yarn install puis yarn run dev
+
 ## 1ER partie de l'application
 
 - Possibilité de sélectionnées plusieurs candidatures
