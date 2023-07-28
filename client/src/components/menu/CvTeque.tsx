@@ -19,8 +19,9 @@ export default function CvTeque({
 
   const [showModal, setShowModal] = useState<boolean>(false);
 
-  const selectedesMultipCandidates = (candidate: CandidateType) => {
-    if (selectedCandidateId.includes(candidate.id)) {
+  const toggleSelectedCandidate = (candidate: CandidateType) => {
+    const isSelected = selectedCandidateId.includes(candidate.id);
+    if (isSelected) {
       setSelectedCandidateId(
         selectedCandidateId.filter((id) => id !== candidate.id)
       );
@@ -33,9 +34,7 @@ export default function CvTeque({
     .filter((candidate) => selectedCandidateId.includes(candidate.id))
     .map((candidate) => candidate.email);
 
-  const openModal = () => {
-    setShowModal(true);
-  };
+  const openModal = () => setShowModal(true);
 
   return (
     <>
@@ -51,7 +50,7 @@ export default function CvTeque({
             key={index}
             candidate={candidate}
             isSelected={selectedCandidateId.includes(candidate.id)}
-            selectedesMultipCandidates={selectedesMultipCandidates}
+            toggleSelectedCandidate={toggleSelectedCandidate}
           />
         ))}
       </div>

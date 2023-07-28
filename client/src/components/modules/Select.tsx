@@ -14,7 +14,7 @@ export default function Select({ candidates, setCandidates }) {
     setCandidates(candidatesCopy);
   };
 
-  const handleFilterChange = (e) => {
+  const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
     if (value === "NE") sortCandidatesByName(true);
     if (value === "DE") sortCandidatesByRating(true);
@@ -22,13 +22,14 @@ export default function Select({ candidates, setCandidates }) {
   };
 
   return (
-    <div>
-      <select className="bg-[#f0f4f9]" onChange={handleFilterChange}>
-        <option value="">Filter par</option>
-        <option value="NE">Name</option>
-        <option value="AS">Note +</option>
-        <option value="DE">Note -</option>
-      </select>
-    </div>
+    <select
+      className=" rounded bg-[#f0f4f9] px-1  font-semibold text-sm"
+      onChange={(e) => handleFilterChange(e)}
+    >
+      <option value="">Filter par</option>
+      <option value="NE">Name</option>
+      <option value="AS">Note +</option>
+      <option value="DE">Note -</option>
+    </select>
   );
 }

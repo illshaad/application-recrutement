@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-import Header from "./components/Header";
 import Menu from "./components/menu/Menu";
 import CvTeque from "./components/menu/CvTeque";
 
@@ -21,15 +20,12 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Header />
-      <div className="flex">
-        <Menu />
-        <div className="w-full">
-          <CvTeque candidates={candidates} setCandidates={setCandidates} />
-        </div>
+    <div className="flex">
+      <Menu />
+      <div className="w-full">
+        <CvTeque candidates={candidates} setCandidates={setCandidates} />
       </div>
-    </>
+    </div>
   );
 }
 
